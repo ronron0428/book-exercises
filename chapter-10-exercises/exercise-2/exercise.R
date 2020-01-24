@@ -33,28 +33,27 @@ salaries$raise <- salaries$year_2018_salaries > salaries$year_2017_salaries
 ### cell rather than the whole row!)
 
 # What was the 2018 salary of Employee 57
-salaries[salaries$employees[57], "year_2018_salaries"]
+salaries[salaries$employees == "Employee 57", "year_2018_salaries"]
 
 # How many employees got a raise?
-
+nrow(salaries[salaries$raise == TRUE, ])
 
 # What was the dollar value of the highest raise?
-
+max(salaries[salaries$raise == TRUE, "annual_salary_adjustments"])
 
 # What was the "name" of the employee who received the highest raise?
-
-
+!!!
 # What was the largest decrease in salaries between the two years?
-
+min(salaries[salaries$raise == FALSE, "annual_salary_adjustments"])
 
 # What was the name of the employee who recieved largest decrease in salary?
 
-
 # What was the average salary change?
-
+mean(salaries$annual_salary_adjustments)
 
 # For people who did not get a raise, how much money did they lose on average?
-
+paycut <- salaries[salaries$raise == FALSE, ]
+mean(paycut$annual_salary_adjustments)
 
 ## Consider: do the above averages match what you expected them to be based on 
 ## how you generated the salaries?
