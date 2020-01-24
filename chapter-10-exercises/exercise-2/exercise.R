@@ -42,7 +42,7 @@ nrow(salaries[salaries$raise == TRUE, ])
 max(salaries[salaries$raise == TRUE, "annual_salary_adjustments"])
 
 # What was the "name" of the employee who received the highest raise?
-!!!
+
 # What was the largest decrease in salaries between the two years?
 min(salaries[salaries$raise == FALSE, "annual_salary_adjustments"])
 
