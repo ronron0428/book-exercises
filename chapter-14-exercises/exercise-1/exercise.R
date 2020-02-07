@@ -13,7 +13,7 @@ base_uri <- "https://api.github.com"
 # that will list _repos in an organization_. Then create a variable named
 # `org_resource` that stores the endpoint for the `programming-for-data-science`
 # organization repos (this is the _path_ to the resource of interest).
-org_resource <- paste0("/orgs/", "programming-for-data-science","/respos")
+org_resource <- paste0("/orgs/", "programming-for-data-science","/repos")
 
 # Send a GET request to this endpoint (the `base_uri` followed by the 
 # `org_resource` path). Print the response to show that your request worked. 
@@ -30,7 +30,7 @@ library("jsonlite")
 json_df <- fromJSON(content)
 
 # How many (public) repositories does the organization have?
-#doesn't work 
+#20 
 
 # Now a second query:
 # Create a variable `search_endpoint` that stores the endpoint used to search 
